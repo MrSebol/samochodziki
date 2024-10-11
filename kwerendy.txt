@@ -1,0 +1,19 @@
+1.SELECT imie, nazwisko from klienci where idklienta = 4
+
+2.SELECT * from auta where rocznik = '2010'
+
+3.SELECT * from auta where marka = 'ford'
+
+4.SELECT * from auta where idauta >= 2 and idauta <= 4
+
+5.SELECT imie, nazwisko FROM klienci WHERE adres LIKE 'Rolna%' AND miasto = 'Katowice'
+
+6.SELECT auta.marka, auta.model FROM auta, wypozyczenia WHERE auta.idauta = wypozyczenia.idauta ORDER BY wypozyczenia.naleznosc DESC LIMIT 1
+
+7.SELECT auta.idauta, auta.marka, auta.model from auta, wypozyczenia where auta.idauta = wypozyczenia.idauta ORDER BY wypozyczenia.datawyp ASC LIMIT 1
+
+8.SELECT klienci.imie, klienci.nazwisko from klienci, wypozyczenia where klienci.idklienta = wypozyczenia.idklienta AND wypozyczenia.idauta = 1
+
+9.SELECT auta.model, auta.marka from auta, wypozyczenia where auta.idauta = wypozyczenia.idauta AND wypozyczenia.idklienta = 4
+
+10.SELECT klienci.imie, auta.model, auta.marka from klienci, auta, wypozyczenia where klienci.idklienta = wypozyczenia.idklienta AND auta.idauta = wypozyczenia.idauta AND klienci.nazwisko = „Pastewniak”
